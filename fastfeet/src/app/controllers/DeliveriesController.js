@@ -30,10 +30,7 @@ class DeliveriesController {
     });
 
     const start_date = {
-      value: format(
-        startOfHour(new Date('2020-02-19T10:00:00')),
-        "yyyy-MM-dd'T'HH:mm:ssxxx"
-      ),
+      value: format(startOfHour(new Date()), "yyyy-MM-dd'T'HH:mm:ssxxx"),
     };
 
     const isAvailable = available.find(a => a.value === start_date.value);
